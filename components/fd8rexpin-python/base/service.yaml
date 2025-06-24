@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: fd8rexpin-python
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: fd8rexpin-python 
+  name: fd8rexpin-python
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: fd8rexpin-python 
